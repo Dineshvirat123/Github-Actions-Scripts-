@@ -1,0 +1,11 @@
+name: file creation and execution of file
+on: workflow_dispatch
+jobs:
+    files:
+        runs-on: ubuntu-latest
+        steps:
+            - name: create a file
+              run: echo"dinesh">devops.txt
+            - name: execution of a file
+              run: ls
+              
