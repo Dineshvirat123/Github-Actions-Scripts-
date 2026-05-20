@@ -1,1 +1,13 @@
+name: Execution of github actions
+on: push
+
+jobs:
+    files:
+        runs-on: ubuntu-latest
+        steps:
+            - name: creating a file
+              run: touch test.txt
+            - name: execute the linux command
+              run: ls -lrth
+              
 
