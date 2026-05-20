@@ -5,7 +5,7 @@ jobs:
         runs-on: ubuntu-latest
         steps:
             - name: create a file
-              run: echo"dinesh">devops.txt
+              run: echo "dinesh" > devops.txt
             - name: execution of a file
               run: ls
               
