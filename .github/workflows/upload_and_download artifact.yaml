@@ -28,7 +28,7 @@ jobs:
           name: datafile
 
       - name: display the content inside the artifact
-        run: cat datafile/data.txt
+        run: cat data.txt
 
       - name: Check extracted path
         run: |
