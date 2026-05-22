@@ -1,1 +1,25 @@
+name: Upload and Download artifacts
+on: workflows-dispatchjobs
+jobs:
+  upload:
+    runs-on: ubuntu-latest
+    steps:
+    - name: upload the file
+      run: echo "data" > data.txt
+    - name: upload the file into artifacts
+      uses: actions/upload-artifact@v7
+      with:
+        name: datafile
+        path: data.txt
+  download:
+    runs-on: ubuntu-latest
+    steps:
+    - name: download the file from artifact 
+      uses: actions/download-artifact@v8
+      with:
+        name: datafile
 
+    - name: display the content inside the artifact
+      run: cat data.txt
+
+      
