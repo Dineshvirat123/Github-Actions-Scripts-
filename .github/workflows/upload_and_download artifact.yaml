@@ -13,6 +13,7 @@ jobs:
         path: data.txt
   download:
     runs-on: ubuntu-latest
+    needs: upload
     steps:
     - name: download the file from artifact 
       uses: actions/download-artifact@v8
