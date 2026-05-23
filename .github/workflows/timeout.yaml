@@ -1,1 +1,10 @@
-
+name: timeout
+on: workflow_dispatch
+jobs:
+    timeout:
+        runs-on: ubuntu-latest
+        steps:
+          - name: display
+            run: lsblk
+          - name: sleep
+            run: sleep 200
